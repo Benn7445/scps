@@ -4,8 +4,8 @@ module.exports = {
   async rewrites() {
     return [
       {
-        source: "/sc/:team/:id",
-        destination: "https://www.sofascore.com/:team/:id",
+        source: "/sc/:id",
+        destination: "https://api.sofascore.com/api/v1/event/:id/h2h/events",
       },
     ];
   },

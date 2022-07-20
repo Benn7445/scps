@@ -1,7 +1,5 @@
 export const scrapleLink = async (link: string) => {
-  const response = await fetch(
-    "https://api.sofascore.com/api/v1/event/" + link + "/h2h/events"
-  );
+  const response = await fetch("/sc/" + link);
   const body = await response.json();
   let starting = 0;
   for (let i = body.events.length - 1; i > 0; i--) {
